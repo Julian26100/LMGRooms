@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add this line to link your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <script>
+        // JavaScript code for login functionality goes here
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the username and password from the form
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the username and password are correct
+            if (username === "admin" && password === "root") {
+                // Redirect to index.html if the credentials are correct
+                window.location.href = "admin/admin.html";
+            } else {
+                // Display an error message if the credentials are incorrect
+                document.getElementById("error-message").textContent = "Invalid username or password";
+            }
+        });
+    </script>
+</body>
+</html>
