@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title {
+    font-size: 28px;
+    margin: 0;
+}
+
+.wallet-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.wallet-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.balance-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.balance-amount {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.action-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.wallet-list,
+.wallet-actions {
+    text-align: center;
+}
+
+.actions-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.wallet-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wallet-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.wallet-form input[type="text"],
+.wallet-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.wallet-form button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.wallet-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

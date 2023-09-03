@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BTC Wallet</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">BTC Wallet</h1>
+    </header>
+    <main class="wallet-container">
+        <section class="wallet-info">
+            <div class="balance">
+                <h2 class="balance-title">Main Wallet Balance</h2>
+                <p class="balance-amount" id="main-wallet-balance">2.00 BTC</p>
+            </div>
+            <button id="create-wallet-btn" class="action-button">Create New Wallet</button>
+        </section>
+        <section class="wallet-list">
+            <!-- Wallet sections will be added here -->
+        </section>
+        <section class="wallet-actions">
+            <h2 class="actions-title">Actions</h2>
+            <form id="transfer-form" class="wallet-form">
+                <label for="recipient">Recipient Wallet:</label>
+                <input type="text" id="recipient" name="recipient" required>
+                <label for="amount">Amount (BTC):</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+                <button type="submit" class="action-button">Transfer</button>
+            </form>
+            <form id="deposit-form" class="wallet-form">
+                <label for="deposit-amount">Amount (BTC):</label>
+                <input type="number" id="deposit-amount" name="deposit-amount" step="0.01" required>
+                <button type="submit" class="action-button">Deposit</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
