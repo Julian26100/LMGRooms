@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <!-- Add your dashboard content here -->
+            <p>Welcome to the admin dashboard. You can manage your website's content and settings here.</p>
+        </section>
+
+        <section id="change-password">
+            <h2>Change Password</h2>
+            <form id="password-change-form">
+                <div class="input-container">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                </div>
+                <div class="input-container">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <button type="submit">Change Password</button>
+            </form>
+            <p id="password-change-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company</p>
+    </footer>
+
+    <script>
+        document.getElementById("password-change-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the current password and new password from the form
+            var currentPassword = document.getElementById("current-password").value;
+            var newPassword = document.getElementById("new-password").value;
+
+            // In a real application, you would perform server-side password validation and update here
+            // For this example, let's assume the password is successfully updated
+            // In a real application, you would securely hash and store the new password
+
+            // Display a success message
+            document.getElementById("password-change-message").textContent = "Password changed successfully!";
+        });
+    </script>
+</body>
+</html>
