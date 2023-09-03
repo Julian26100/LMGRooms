@@ -1,0 +1,98 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Center the container vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Adjust the height as needed (70% viewport height) */
+    background-color: orange; /* Set the background color of the entire container to orange */
+    background-image: url('Login/pic.jpg'); /* Updated path to your background image */
+    background-size: cover; /* Make the background image cover the container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Make it a positioning context */
+}
+
+/* Background overlay for login box */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Place it above the background image */
+}
+
+/* Form styling */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    z-index: 2; /* Place it above the overlay */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+    padding: 40px; /* Increase the padding to add space to top and bottom */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 70%; /* Adjust the width as needed */
+    position: relative; /* Create a stacking context */
+    z-index: 2; /* Place it above the overlay */
+}
+
+.input-container {
+    margin-bottom: 20px; /* Increase the margin between input fields */
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* Increase the margin below labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
